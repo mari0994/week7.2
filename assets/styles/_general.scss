@@ -1,0 +1,43 @@
+$font1: 'Montserrat', sans-serif;
+$font2: 'Poppins', sans-serif;
+$col-h: #4C5930;
+$col-back: #FBF9EA;
+$col-btn: #E77622;
+$col-euro: #C0C0C0;
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+html{
+    font-family: $font1;
+}
+
+body {
+    margin: 0;
+    display: grid;
+    grid-template: repeat(3, minmax(min-content, max-content)) 1fr minmax(min-content, max-content) / 1fr;
+}
+
+h2{
+    font-size: 1,125rem;
+    line-height: 107.5%;
+    text-transform: uppercase;
+}
+
+a{
+    text-decoration: none;
+}
+
+.btn{
+    background-image: url('../images/desktop/point-right-button.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+}
