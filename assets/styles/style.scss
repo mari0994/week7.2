@@ -4,7 +4,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 100vw; /*не могу найти никакой другой способ чтобы не было горизонтального скролла на ширине экрана 320px*/
     .header__nav{
         display: flex;
         justify-content: space-around;
@@ -40,6 +39,7 @@
         background-image: url('../images/mobile/header-background.png');
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center;
         min-height: 729px;
         display: flex;
         flex-direction: column;
@@ -80,24 +80,242 @@
             line-height: 0.75rem;
             align-items: center;
             text-transform: uppercase;
-            margin-bottom: 40px;
+            margin-bottom: 35px;
         }
 
     }
 }
 
 .main{
-    max-width: 100vw;
     .products{
+        background-color: $col-back;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        .products__h{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            margin-top: 2.5rem;
+            .products__h2{
+                padding: 1.25rem;
+                font-size: 1.125rem;
+                color: $col-h;
+                text-transform: uppercase;
+                font-weight: 400;
+                span{
+                    font-weight: 700;
+                }
+            }
+            .products__h3{
+                padding: 0.625rem;
+                font-size: 1rem;
+                text-transform: uppercase;
+                font-weight: 400;
+            }
+            .products__txt{
+                font-size: 0.625rem;
+                padding-left: 1.875rem;
+                padding-right: 1.875rem;
+            }
+        }
+        .products__wrapper{
+            display: grid;
+            grid-template: repeat(3, min-content, max-content)/ 1fr 1fr;
+            justify-items: center;
+            align-items: center;
+            row-gap: 0.937rem;
+            column-gap: 1.875rem;
+            .products__cards{
+                margin-top: 2.187rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .products__cards-pic img{
+                    width: 40vw;
+                }
+                .products__cards-name{
+                    color: $col-btn;
+                    font-weight: 700;
+                    font-size: 0.625rem;
+                    font-family: 'Poppins', sans-serif;
+                    font-style: normal;
+                    line-height: 165%;
+                    text-transform: capitalize;
+                }
+                .products__cards-type{
+                    font-family: 'Poppins', sans-serif;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 0.75rem;
+                    line-height: 165%;
+                    text-transform: uppercase;
+                }
+                .products__cards-price{
+                    font-family: 'Poppins', sans-serif;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 1rem;
+                    line-height: 165%;
+                    .products__cards-price-old{
+                        text-decoration-line: line-through;
+                        color: $col-euro;
+                        padding: 5px;
+                    }
+                    .products__cards-price-new{
+                        color: $col-h;
+                        font-weight: 700;
+                    }
+                }
+
+            }
+            .products__btn-wrapper{
+                grid-area: 3 / 1/ 4/ 3;
+                min-height:5.625rem;
+                margin-top: 2.187rem;
+                .products__btn{
+                    width: 163.92px;
+                    height: 39.55px;
+                    background-color: $col-back;
+                    border: 1px solid $col-btn;
+                    color: $col-btn;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 0.625rem;
+                    line-height: 0.75rem;
+                    align-items: center;
+                    text-transform: uppercase;
+                }
+            }
+        }
 
     }
-    .process{}
+    .process{
+        background-color: $col-h;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.562rem;
+        justify-content: center;
+        .process__h{
+            align-self: center;
+            margin-top: 2.812rem;
+            margin-bottom: 2.5rem;
+            color: white;
+            font-style: normal;
+            font-size: 1.125rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            span{
+                font-weight: 700;
+            }
+        }
+        .process__step1{
+            min-height: 10.25rem;
+            background-image: url('../images/desktop/bottle1.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+        .process__arrow1{
+            display: none;
+            /*height: 10.25rem;
+            background-image: url('../images/desktop/arrow1.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;*/
+        }
+        .process__step2{
+            height: 10.25rem;
+            background-image: url('../images/desktop/bottle2.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+        .process__arrow2{
+            display: none;
+        }
+        .process__step3{
+            height: 10.25rem;
+            background-image: url('../images/desktop/bottle3.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+        .process__arrow3{
+            display: none;
+        }
+        .process__step4{
+            height: 10.25rem;
+            background-image: url('../images/desktop/bottle4.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+        .process__step-name{
+            align-self: center;
+            color: white;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 0.75rem;
+            line-height: 165%;
+            text-transform: uppercase;
+            padding-bottom: 2.812rem;
+        }
+    }
 }
 
 .footer{
-    max-width: 100vw;
+    background-color: $col-back;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3.125rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    .footer__logo{
+        height: 32px;
+        width: 106px;
+        margin-top: 3.125rem;
+    }
+    .footer__line{
+        height: 1px;
+        width: 268px;
+        border: 1px solid $col-h;
+    }
+    .footer__nav{
+        .footer__nav-wrapper{
+            width:268px;
+            height: 4.75rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(87px, 1fr));
+            justify-items: left; /*подумтаь о том как решить проблему с етм что они стоят в непраивльном порчядке в мобильно аерсии - или преставлять хтмл и потом менять ордер, или контейнеры по колонкам, или добавлять разыне лкассы и расставлять ордер в мобильноц вресии*/
+            .footer__nav-list{
+                color: black;
+                font-family: 'Poppins', sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 0.625rem;
+                line-height: 0.937rem;
+            }
+        }
+    }
+    .footer__social{
+        width: 127px;
+        display: flex;
+        column-gap: 20px;
+        align-items: center;
+        .footer__social-list img{
+            max-height: 27px;
+        }
+    }
+    .footer__copyright{
+        margin-bottom: 3.125rem;
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 0.625rem;
+        line-height: 165%;
+        opacity: 0.8;
+    }
 }

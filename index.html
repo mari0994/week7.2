@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;700&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -45,7 +45,7 @@
     <main class="main">
       <section class="products">
         <div class="products__h">
-          <h2 class="products__h2">our products</h2>
+          <h2 class="products__h2">our <span>products</span></h2>
           <h3 class="products__h3">Personal Care</h3>
           <p class="products__txt">
             Choose a product that will make your day brighter. Are you looking
@@ -105,26 +105,24 @@
               ><span class="products__cards-price-new">€5</span>
             </p>
           </div>
-          <button class="products__btn btn">all products</button>
+          <div class="products__btn-wrapper">
+            <button class="products__btn btn">all products</button>
+          </div>
         </div>
       </section>
       <section class="process">
         <h2 class="process__h">How it <span>works</span></h2>
-        <div class="process__step">
-          <p class="process__step-name">Fill the bottle with warm water</p>
-        </div>
+        <div class="process__step1"></div>
+        <p class="process__step-name">Fill the bottle with warm water</p>
         <div class="process__arrow1"></div>
-        <div class="process__step">
-          <p class="process__step-name">Add the powdered formula refill</p>
-        </div>
+        <div class="process__step2"></div>
+        <p class="process__step-name">Add the powdered formula refill</p>
         <div class="process__arrow2"></div>
-        <div class="process__step">
-          <p class="process__step-name">Close the bottle and shakE it</p>
-        </div>
+        <div class="process__step3"></div>
+        <p class="process__step-name">Close the bottle and shakE it</p>
         <div class="process__arrow3"></div>
-        <div class="process__step">
-          <p class="process__step-name">Your product is ready to use</p>
-        </div>
+        <div class="process__step4"></div>
+        <p class="process__step-name">Your product is ready to use</p>
       </section>
       <!--<section>
         <h2><span>100% RECYCLED</span>PLASTIC</h2>
@@ -247,19 +245,20 @@
         src="assets/images/desktop/logo.png"
         alt="redaily logo"
       />
+      <div class="footer__line"></div>
       <div class="footer__nav">
-        <a class="footer__nav-list" href="#">Our products</a>
-        <a class="footer__nav-list" href="#">Our mission</a>
-        <a class="footer__nav-list" href="#">How it works</a>
-        <a class="footer__nav-list" href="#">About Us</a>
-        <a class="footer__nav-list" href="#">FAQ</a>
-        <a class="footer__nav-list" href="#">Contacts</a>
-        <a class="footer__nav-list" href="#">Terms of Use</a>
-        <a class="footer__nav-list" href="#">Privacy Policy</a>
+        <div class="footer__nav-wrapper">
+          <a class="footer__nav-list" href="#">Our products</a>
+          <a class="footer__nav-list" href="#">Our mission</a>
+          <a class="footer__nav-list" href="#">How it works</a>
+          <a class="footer__nav-list" href="#">About Us</a>
+          <a class="footer__nav-list" href="#">FAQ</a>
+          <a class="footer__nav-list" href="#">Contacts</a>
+          <a class="footer__nav-list" href="#">Terms of Use</a>
+          <a class="footer__nav-list" href="#">Privacy Policy</a>
+        </div>
       </div>
-      <p class="footer__copyright">
-        @ copyright redaily 2022. All rights reserved
-      </p>
+      <div class="footer__line"></div>
       <div class="footer__social">
         <a class="footer__social-list" href="#"
           ><img src="assets/images/desktop/icon-twitter.png" alt="twitter icon"
@@ -275,6 +274,9 @@
             alt="instagram icon"
         /></a>
       </div>
+      <p class="footer__copyright">
+        @ copyright redaily 2022. All rights reserved
+      </p>
     </footer>
   </body>
 </html>
