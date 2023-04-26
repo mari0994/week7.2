@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -320,8 +319,8 @@ a {
   width: 268px;
   height: 4.75rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(87px, 1fr));
-  justify-items: left; /*подумтаь о том как решить проблему с етм что они стоят в непраивльном порчядке в мобильно аерсии - или преставлять хтмл и потом менять ордер, или контейнеры по колонкам, или добавлять разыне лкассы и расставлять ордер в мобильноц вресии*/
+  grid-template: 1fr 1fr 1fr/1fr 1fr 1fr;
+  justify-items: left;
 }
 .footer .footer__nav .footer__nav-wrapper .footer__nav-list {
   color: black;
@@ -330,6 +329,30 @@ a {
   font-weight: 400;
   font-size: 0.625rem;
   line-height: 0.937rem;
+}
+.footer .footer__nav .footer__nav-wrapper .item1 {
+  grid-area: 1/1/2/2;
+}
+.footer .footer__nav .footer__nav-wrapper .item2 {
+  grid-area: 2/1/3/2;
+}
+.footer .footer__nav .footer__nav-wrapper .item3 {
+  grid-area: 3/1/4/2;
+}
+.footer .footer__nav .footer__nav-wrapper .item4 {
+  grid-area: 1/2/2/3;
+}
+.footer .footer__nav .footer__nav-wrapper .item5 {
+  grid-area: 2/2/3/3;
+}
+.footer .footer__nav .footer__nav-wrapper .item6 {
+  grid-area: 3/2/4/3;
+}
+.footer .footer__nav .footer__nav-wrapper .item7 {
+  grid-area: 1/3/2/4;
+}
+.footer .footer__nav .footer__nav-wrapper .item8 {
+  grid-area: 2/3/3/4;
 }
 .footer .footer__social {
   width: 127px;
