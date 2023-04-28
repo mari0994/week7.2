@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -20,7 +21,7 @@ body {
 }
 
 h2 {
-  font-size: 1, 125rem;
+  font-size: 1.125rem;
   line-height: 107.5%;
   text-transform: uppercase;
 }
@@ -38,7 +39,6 @@ a {
 .header {
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 .header .header__nav {
   display: flex;
@@ -81,7 +81,7 @@ a {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  row-gap: 20px;
+  row-gap: 1.25vw;
 }
 .header .header__cover .header__cover-h {
   font-size: 1.25rem;
@@ -90,6 +90,7 @@ a {
   line-height: 24px;
   text-transform: uppercase;
   color: #4C5930;
+  opacity: 0.8;
 }
 .header .header__cover .header__cover-h span {
   font-weight: 700;
@@ -156,7 +157,7 @@ a {
 }
 .main .products .products__wrapper {
   display: grid;
-  grid-template: repeat(3, min-content, max-content)/1fr 1fr;
+  grid-template: repeat(3, minmax min-content, max-content)/1fr 1fr;
   justify-items: center;
   align-items: center;
   row-gap: 0.937rem;
@@ -252,11 +253,6 @@ a {
 }
 .main .process .process__arrow1 {
   display: none;
-  /*height: 10.25rem;
-  background-image: url('../images/desktop/arrow1.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;*/
 }
 .main .process .process__step2 {
   height: 10.25rem;
@@ -323,6 +319,7 @@ a {
   justify-items: left;
 }
 .footer .footer__nav .footer__nav-wrapper .footer__nav-list {
+  text-align: left;
   color: black;
   font-family: "Poppins", sans-serif;
   font-style: normal;
@@ -372,4 +369,133 @@ a {
   font-size: 0.625rem;
   line-height: 165%;
   opacity: 0.8;
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 1.5vw;
+  }
+  html .header .header__cover {
+    background-image: url("../images/desktop/header-background.png");
+    background-repeat: no-repeat;
+    /*background-size: contain;*/
+    /*как задать размер картинки так, чтобы она полностью помещалась, но при этом не ыбло белых полос сверху и снизу? просто вставить ркатинки разных размеров?*/
+    justify-content: center;
+    align-items: flex-start;
+    row-gap: 1.875rem;
+  }
+  html .header .header__cover .header__cover-h {
+    margin-left: 9.37rem;
+    font-size: 3rem;
+    width: 31.25rem;
+    line-height: 102.9%;
+    opacity: 0.8;
+  }
+  html .header .header__cover .header__cover-txt {
+    margin-left: 9.37rem;
+  }
+  html .header .header__cover .header__cover-btn {
+    margin-top: 30px;
+    margin-left: 9.37rem;
+  }
+  html .main .process {
+    display: grid;
+    grid-template: repeat(5, minmax(min-content, max-content))/1fr 1fr 1fr 1fr 1fr;
+    gap: 1.875rem;
+    padding-bottom: 2.5rem;
+  }
+  html .main .process .process__h {
+    grid-column: 3/4;
+    text-align: center;
+  }
+  html .main .process .process__step1 {
+    grid-area: 2/2/3/3;
+  }
+  html .main .process .name1 {
+    grid-area: 3/2/4/3;
+    text-align: center;
+  }
+  html .main .process .process_arrow1 {
+    display: block;
+    background-image: url("../images/desktop/arrow1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 10.25rem; /*почему не отображается все равно?*/
+    grid-area: 2/3/3/4;
+  }
+  html .main .process .process__step2 {
+    grid-area: 2/4/3/5;
+  }
+  html .main .process .name2 {
+    grid-area: 3/4/4/5;
+    text-align: center;
+  }
+  html .main .process .process__step3 {
+    grid-area: 4/2/5/3;
+  }
+  html .main .process .name3 {
+    grid-area: 5/2/6/3;
+    text-align: center;
+  }
+  html .main .process .process__arrow4 {
+    grid-area: 4/3/5/4;
+  }
+  html .main .process .process__step4 {
+    grid-area: 4/4/5/5;
+  }
+  html .main .process .name4 {
+    grid-area: 5/4/6/5;
+    text-align: center;
+  }
+  html .footer {
+    display: grid;
+    grid-template: repeat(3, 1fr)/1fr 1fr;
+    justify-items: center;
+    row-gap: 0;
+  }
+  html .footer .footer__nav {
+    margin-top: 3.125rem;
+  }
+  html .footer .line1 {
+    display: none;
+  }
+  html .footer .line2 {
+    width: 80%;
+    grid-area: 2/1/3/3;
+  }
+  html .footer .footer__social {
+    grid-column: 2/3;
+    margin-bottom: 0;
+  }
+  html .footer .footer__copyright {
+    grid-area: 3/1/4/2;
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .header__nav {
+    display: grid;
+    justify-items: space-around;
+    align-items: center;
+    min-height: 152px;
+    background-color: #FBF9EA;
+  }
+  .header__nav .header__nav-btn {
+    display: none;
+  }
+  .header__nav .header__nav-list, .header__nav .header__nav-lang {
+    display: flex;
+  }
+  .header__nav .header__nav-logo {
+    height: 32.75px;
+    width: 106px;
+  }
+  .header__nav .header__nav-cart {
+    width: 28px;
+    height: 33px;
+    background-image: url("../images/desktop/cart.png");
+    background-color: #FBF9EA;
+    border: none;
+  }
 }/*# sourceMappingURL=style.css.map */
